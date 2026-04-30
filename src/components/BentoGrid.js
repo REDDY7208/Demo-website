@@ -4,68 +4,59 @@ import data from "@/data/data.json";
 import { Users, Globe, Building, Award } from "lucide-react";
 import { StaggerContainer, StaggerItem, FadeIn } from "./Animations";
 
-const iconMap = {
-  Users, Globe, Building, Award
-};
+const iconMap = { Users, Globe, Building, Award };
+
+const colors = [
+  "from-blue-900 to-slate-900",
+  "from-slate-800 to-slate-900",
+  "from-amber-900 to-slate-900",
+  "from-emerald-900 to-slate-900",
+];
 
 export default function BentoGrid() {
   const features = data.home.features;
 
   return (
-    <section className="py-16 lg:py-32 bg-primary text-primary-foreground overflow-hidden">
+    <section className="py-20 lg:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
-          <FadeIn direction="up" className="max-w-2xl">
-            <h2 className="text-xs md:text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4 md:mb-6">The St. Jude Advantage</h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight">
-              A Foundation Built on <span className="italic font-light">Excellence</span>.
+
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 md:mb-20 gap-6">
+          <FadeIn direction="up" className="max-w-xl">
+            <span className="text-accent uppercase tracking-[0.25em] text-xs font-bold">Why Choose Us</span>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl font-serif text-primary leading-tight mt-3">
+              The Gautam<br /><span className="italic font-light text-accent">Advantage</span>
             </h3>
           </FadeIn>
-          <FadeIn direction="up" delay={0.2} className="md:w-1/3">
-            <p className="text-primary-foreground/70 font-light leading-relaxed text-sm md:text-base">
-              We provide an environment where brilliant minds thrive, supported by unparalleled resources and global perspective.
+          <FadeIn direction="up" delay={0.2} className="md:w-2/5">
+            <p className="text-muted-foreground font-light leading-relaxed text-base">
+              A school where every child is seen, heard, and empowered to reach their full potential.
             </p>
           </FadeIn>
         </div>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-12 gap-px bg-primary-foreground/10">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const IconComponent = iconMap[feature.icon] || Award;
-            
-            // Asymmetric editorial grid
-            let colSpan = "md:col-span-6";
-            let padding = "p-8 md:p-12 lg:p-16";
-            
-            if (index === 0) {
-              colSpan = "md:col-span-7";
-            } else if (index === 1) {
-              colSpan = "md:col-span-5";
-            } else if (index === 2) {
-              colSpan = "md:col-span-4";
-              padding = "p-8 md:p-10";
-            } else if (index === 3) {
-              colSpan = "md:col-span-8";
-              padding = "p-8 md:p-12 lg:p-20";
-            }
-            
             return (
-              <StaggerItem key={feature.id} className={`${colSpan} bg-primary relative group overflow-hidden`}>
-                <div className={`h-full w-full ${padding} flex flex-col justify-between`}>
-                  <div className="text-accent mb-8 md:mb-12 transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-500">
-                    <IconComponent size={36} strokeWidth={1.5} className="w-8 h-8 md:w-9 md:h-9" />
+              <StaggerItem key={feature.id} direction="up">
+                <div className={`relative group overflow-hidden rounded-2xl bg-gradient-to-br ${colors[index]} p-8 h-full min-h-[260px] flex flex-col justify-between cursor-default`}>
+                  {/* Glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-accent/20 to-transparent rounded-2xl" />
+                  {/* Icon */}
+                  <div className="bg-white/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+                    <IconComponent size={28} strokeWidth={1.5} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl md:text-2xl font-serif mb-3 md:mb-4 group-hover:text-accent transition-colors duration-300">
+                    <h4 className="text-xl font-serif text-white mb-3 group-hover:text-accent transition-colors duration-300">
                       {feature.title}
                     </h4>
-                    <p className="text-primary-foreground/60 font-light leading-relaxed text-sm md:text-base">
+                    <p className="text-white/60 font-light leading-relaxed text-sm">
                       {feature.description}
                     </p>
                   </div>
+                  {/* Corner accent */}
+                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/5 rounded-tl-3xl" />
                 </div>
-                {/* Subtle hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </StaggerItem>
             );
           })}

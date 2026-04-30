@@ -145,3 +145,26 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 1px var(--accent) !important;
   outline: none;
 }
+
+/* Mobile touch improvements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Ensure minimum tap target size on mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .swiper-pagination-custom .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+body {
+  overflow-x: hidden;
+}

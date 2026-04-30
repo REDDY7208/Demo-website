@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import data from "@/data/data.json";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,15 +26,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2 group">
-              <motion.div 
-                whileHover={{ rotate: 15, scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="bg-primary text-primary-foreground p-2 rounded-xl"
+            <Link href="/" className="flex items-center gap-3 group">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <BookOpen size={24} />
+                <Image
+                  src="/logo/logo.png"
+                  alt="Gautam High School Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-xl object-contain"
+                />
               </motion.div>
-              <span className="font-serif font-semibold text-2xl tracking-widest text-foreground uppercase">
+              <span className="font-serif font-semibold text-xl tracking-widest text-foreground uppercase">
                 {data.school.logo}
               </span>
             </Link>

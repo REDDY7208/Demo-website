@@ -28,52 +28,52 @@ export default function ContactPage() {
   return (
     <div className="w-full bg-background min-h-screen">
       {/* Header */}
-      <section className="bg-primary pt-24 md:pt-32 pb-32 md:pb-40 text-primary-foreground text-center px-4 relative overflow-hidden">
+      <section className="bg-primary pt-20 md:pt-32 pb-16 md:pb-40 text-primary-foreground text-center px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/40 pointer-events-none"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif mb-4 md:mb-6 tracking-tight text-white">Contact Us</h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto px-2">
-            Begin your journey with St. Jude International. We welcome inquiries from prospective families.
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif mb-3 md:mb-6 tracking-tight text-white">Contact Us</h1>
+          <p className="text-base md:text-xl lg:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto px-2">
+            We'd love to hear from you. Reach out for admissions, enquiries, or any information about Gautam High School.
           </p>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-20 md:-mt-24 mb-16 md:mb-32 relative z-20">
-        <div className="grid lg:grid-cols-3 gap-8">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8 md:-mt-24 mb-12 md:mb-32 relative z-20">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
           
           {/* Contact Info */}
-          <div className="space-y-6 md:space-y-8 mt-12 lg:mt-0">
-            <div className="editorial-card p-8 md:p-10 bg-primary text-primary-foreground h-full">
-              <h3 className="text-2xl md:text-3xl font-serif tracking-tight mb-6 md:mb-8">Admissions Office</h3>
+          <div className="space-y-6 md:space-y-8 mt-0 lg:mt-0">
+            <div className="editorial-card p-6 md:p-10 bg-primary text-primary-foreground h-full rounded-2xl">
+              <h3 className="text-2xl md:text-3xl font-serif tracking-tight mb-6 md:mb-8 text-white">Admissions Office</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-xl">
-                    <MapPin size={24} />
+                  <div className="bg-white/10 p-3 rounded-xl">
+                    <MapPin size={24} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-xl">Address</h4>
-                    <p className="text-primary-foreground/70 mt-1 font-light">{contact.address}</p>
+                    <h4 className="font-serif text-xl text-white">Address</h4>
+                    <p className="text-white/80 mt-1 font-light">{contact.address}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-xl">
-                    <Phone size={24} />
+                  <div className="bg-white/10 p-3 rounded-xl">
+                    <Phone size={24} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-xl">Phone</h4>
-                    <p className="text-primary-foreground/70 mt-1 font-light">{contact.phone}</p>
+                    <h4 className="font-serif text-xl text-white">Phone</h4>
+                    <p className="text-white/80 mt-1 font-light">{contact.phone}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-xl">
-                    <Mail size={24} />
+                  <div className="bg-white/10 p-3 rounded-xl">
+                    <Mail size={24} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-xl">Email</h4>
-                    <p className="text-primary-foreground/70 mt-1 font-light">{contact.email}</p>
+                    <h4 className="font-serif text-xl text-white">Email</h4>
+                    <p className="text-white/80 mt-1 font-light">{contact.email}</p>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
     {/* Contact Form */}
     <div className="lg:col-span-2">
-      <div className="editorial-card p-8 md:p-14 bg-card border border-border">
+      <div className="editorial-card p-6 md:p-14 bg-card border border-border rounded-2xl">
         <h3 className="text-2xl md:text-3xl font-serif text-primary tracking-tight mb-6 md:mb-8">Send a Message</h3>
               
               {submitted ? (
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-xs tracking-widest uppercase text-muted-foreground font-semibold">Your Name</label>
                       <input 
@@ -175,7 +175,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Embed */}
-      <section className="h-[500px] w-full bg-muted border-y border-border p-2">
+      <section className="h-[300px] sm:h-[400px] md:h-[500px] w-full bg-muted border-y border-border p-2">
         <iframe 
           src={contact.mapEmbedUrl} 
           width="100%" 
@@ -184,7 +184,7 @@ export default function ContactPage() {
           allowFullScreen="" 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale hover:grayscale-0 transition-all duration-700"
+          className="transition-all duration-700"
         ></iframe>
       </section>
     </div>

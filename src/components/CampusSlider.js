@@ -18,12 +18,12 @@ export default function CampusSlider() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-16">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
           <FadeIn direction="up">
-            <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold mb-3 md:mb-4">The Estate</h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary-foreground tracking-tight">Our Historic Campus</h3>
+            <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold mb-3 md:mb-4">Campus Life</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary-foreground tracking-tight">Our Beautiful Campus</h3>
           </FadeIn>
           
           {/* Custom Navigation Buttons */}
-          <FadeIn direction="up" delay={0.2} className="flex gap-4 hidden md:flex">
+          <FadeIn direction="up" delay={0.2} className="hidden md:flex gap-4">
             <button className="swiper-button-prev-custom flex items-center justify-center w-12 h-12 rounded-full border border-primary-foreground/20 text-primary-foreground hover:bg-accent hover:border-accent hover:text-primary transition-all duration-300">
               <ArrowLeft size={20} strokeWidth={1.5} />
             </button>
@@ -62,7 +62,7 @@ export default function CampusSlider() {
                 <img 
                   src={img.url} 
                   alt={img.alt} 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  className="w-full h-full object-cover transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-slate-900/40 mix-blend-multiply pointer-events-none"></div>
                 <div className="absolute bottom-12 left-4 right-4 md:right-auto md:bottom-12 md:left-12 bg-card/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-3 border border-border">

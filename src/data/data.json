@@ -1,15 +1,15 @@
 {
   "school": {
-    "name": "St. Jude International",
-    "tagline": "A Legacy of Excellence.",
-    "logo": "Edith",
-    "about_snippet": "Founded on principles of rigorous academic inquiry and global leadership, St. Jude International remains at the forefront of elite education, cultivating the innovators and thought leaders of tomorrow."
+    "name": "Gautam High School",
+    "tagline": "Nurturing Excellence, Building Futures.",
+    "logo": "Gautam",
+    "about_snippet": "Gautam High School is a trusted institution dedicated to providing quality education and shaping the future of young minds. With a strong focus on academic excellence, discipline, and values, our school creates a positive environment where students can learn, grow, and succeed."
   },
   "contact": {
-    "address": "1200 Prestigious Way, Geneva, CH 1201",
-    "phone": "+41 22 555 0198",
-    "email": "admissions@stjude-international.edu",
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.34005886638!2d6.143157715842858!3d46.20439067911681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65275e7a9b01%3A0xc3f8e5f22e2a863!2sLake%20Geneva!5e0!3m2!1sen!2sch!4v1680000000000!5m2!1sen!2sch",
+    "address": "3/281, Sai Kuteer Rd, Bollavaram, Y.M.R. Colony, Proddatur, Kadapa, Andhra Pradesh 516360, India",
+    "phone": "+91 94402 80980",
+    "email": "admissions@gautamhighschool.edu.in",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.0!2d78.5482!3d14.7333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQ0JzAwLjAiTiA3OMKwMzInNTMuNSJF!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
     "socialLinks": {
       "facebook": "https://facebook.com",
       "twitter": "https://twitter.com",
@@ -19,131 +19,142 @@
   },
   "home": {
     "hero": {
-      "title": "Cultivating Global Leaders.",
-      "subtitle": "An elite academic sanctuary where tradition meets visionary innovation. We prepare exceptional minds to navigate and shape a complex world.",
-      "ctaText": "Discover Our Heritage",
+      "title": "Nurturing Excellence, Building Futures.",
+      "subtitle": "A trusted co-educational English medium school in Proddatur — where academics, values, and overall development come together since 2005.",
+      "ctaText": "Discover Our School",
       "ctaLink": "/about",
-      "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop"
+      "image": "/homepage/homepage%20hero%20image.png"
     },
     "aboutSnippet": {
-      "heading": "A Tradition of Intellectual Rigor",
-      "text": "For over a century, St. Jude International has been synonymous with academic prestige. Our curated curriculum challenges students to push the boundaries of their potential in an environment that values intellectual curiosity, ethical leadership, and global perspective.",
-      "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop"
+      "heading": "A Culture of Learning & Growth",
+      "text": "Gautam High School is a trusted institution dedicated to providing quality education and shaping the future of young minds. Established in 2005, we have built a reputation for consistent academic results and encouraging students to achieve their full potential in both academics and extracurricular activities.",
+      "image": "/About%20Us%20section/about.png"
     },
     "features": [
       {
         "id": "f1",
-        "title": "World-Class Faculty",
-        "description": "Learn from esteemed scholars, researchers, and industry leaders dedicated to mentorship.",
+        "title": "Experienced Faculty",
+        "description": "Highly qualified and dedicated teachers who guide students with care, patience, and personalized attention — continuously updating their methods to match modern standards.",
         "icon": "Users"
       },
       {
         "id": "f2",
-        "title": "Global Perspective",
-        "description": "An internationally recognized curriculum fostering a profound understanding of global interconnectedness.",
-        "icon": "Globe"
-      },
-      {
-        "id": "f3",
-        "title": "State-of-the-Art Facilities",
-        "description": "Architecturally stunning spaces designed to inspire creativity, research, and athletic excellence.",
+        "title": "Modern Infrastructure",
+        "description": "Smart classrooms, fully equipped science labs, advanced computer lab, library, spacious playground, and safe school transportation.",
         "icon": "Building"
       },
       {
-        "id": "f4",
-        "title": "Holistic Excellence",
-        "description": "A commitment to the intellectual, emotional, and physical development of every individual.",
+        "id": "f3",
+        "title": "Holistic Development",
+        "description": "Sports, cultural programs, science exhibitions, quiz and debate competitions — building confidence, teamwork, and leadership in every student.",
         "icon": "Award"
+      },
+      {
+        "id": "f4",
+        "title": "Safe & Disciplined",
+        "description": "A secure campus with proper supervision, clear guidelines, and a respectful environment where every student feels safe and supported.",
+        "icon": "Globe"
       }
     ],
     "stats": [
-      { "label": "Ivy League & Oxbridge Acceptance", "value": "42%" },
-      { "label": "Global Partnerships", "value": "85+" },
-      { "label": "Nationalities Represented", "value": "60+" },
-      { "label": "Student-to-Faculty Ratio", "value": "6:1" }
+      { "label": "Years of Excellence", "value": "20+" },
+      { "label": "Students Enrolled", "value": "1000+" },
+      { "label": "Qualified Teachers", "value": "50+" },
+      { "label": "Board Pass Rate", "value": "100%" }
     ],
     "testimonials": [
       {
         "id": "t1",
-        "name": "Dr. Eleanor Vance",
-        "role": "Oxford University Admissions",
-        "quote": "Graduates of St. Jude consistently demonstrate an unparalleled depth of intellectual maturity and a rare capacity for critical thought.",
+        "name": "Priya Sharma",
+        "role": "Parent, Class X",
+        "quote": "Gautam High School has been a wonderful journey for my daughter. The teachers are caring, the environment is safe, and the results speak for themselves.",
         "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
       },
       {
         "id": "t2",
-        "name": "Arthur Pendelton",
-        "role": "Alumnus, Class of '18",
-        "quote": "The rigorous academic environment and the lifelong connections I forged here have been the bedrock of my career in international diplomacy.",
+        "name": "Ravi Kumar",
+        "role": "Alumnus, Class of 2020",
+        "quote": "The discipline and values I learned at Gautam High School shaped who I am today. I am proud to be a Gautamite.",
         "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+      },
+      {
+        "id": "t3",
+        "name": "Sunita Reddy",
+        "role": "Parent, Class VIII",
+        "quote": "The school's focus on both academics and extracurriculars has helped my son discover his true potential. Highly recommended!",
+        "avatar": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=150&auto=format&fit=crop"
       }
     ]
   },
   "about": {
-    "headerImage": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=2070&auto=format&fit=crop",
-    "intro": "A bastion of academic excellence since 1912.",
-    "mission": "Our mandate is to identify and cultivate extraordinary talent, providing an environment where intellectual boundaries are constantly expanded.",
-    "vision": "To remain the premier institution for developing the ethical, innovative, and visionary leaders the world requires.",
-    "history": "Established in the early 20th century, St. Jude International began as a sanctuary for rigorous classical education. Today, it stands as a modern architectural marvel integrating cutting-edge technology with time-honored pedagogical traditions, continually ranked among the top independent schools globally.",
+    "headerImage": "/Aerial%20%20Top%20View%20(Drone%20Style)/drone.png",
+    "intro": "Shaping young minds with knowledge, values, and vision since 2005.",
+    "mission": "To provide high-quality education with modern teaching methods, promote creativity and critical thinking, build strong moral values, ensure overall development of every child, and create a safe, supportive, and inclusive learning environment.",
+    "vision": "To nurture responsible, confident, and knowledgeable individuals who are prepared to face global challenges and contribute positively to society.",
+    "history": "Established in 2005, Gautam High School has been serving the Proddatur community for nearly two decades. Over the years, we have built a strong reputation for consistent academic results, 100% board pass percentage, and encouraging students to achieve their full potential. Our school has been recognized for excellence in both academics and extracurricular activities at district and state levels.",
     "leadership": [
       {
-        "name": "Prof. Alexander Sterling",
-        "role": "Headmaster",
+        "name": "Sri. G. Venkata Ramana",
+        "role": "Founder & Chairman",
         "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
-        "bio": "Former Dean at a leading Ivy League institution, Prof. Sterling brings a visionary approach to modern education."
+        "bio": "A visionary educator with over 30 years of experience, Sri Ramana founded Gautam High School with the dream of transforming education in Proddatur."
       },
       {
-        "name": "Dr. Victoria Chen",
-        "role": "Director of Academic Affairs",
+        "name": "Mrs. Lakshmi Devi",
+        "role": "Principal",
         "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
-        "bio": "A published scholar in pedagogical theory, Dr. Chen oversees our rigorous International Baccalaureate program."
+        "bio": "With 20 years in education, Mrs. Lakshmi Devi leads the school with warmth and rigor, ensuring every student reaches their highest potential."
       }
     ]
   },
   "academics": {
-    "headerImage": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
-    "intro": "We offer a bespoke, intellectually demanding curriculum designed to prepare students for the world's most prestigious universities.",
+    "headerImage": "/Classroom%20Interior/Gemini_Generated_Image_3mnlzw3mnlzw3mnl.png",
+    "intro": "A structured, student-focused curriculum combining classroom learning with real-world applications — ensuring deep understanding, consistent results, and overall development.",
     "departments": [
       {
-        "name": "The Advanced Sciences",
-        "description": "State-of-the-art laboratories supporting advanced research in molecular biology, physics, and applied mathematics.",
+        "name": "Primary School (LKG – 5th)",
+        "description": "Activity-based learning focused on literacy, numeracy, and communication skills — building a strong foundation with individual attention and continuous assessment.",
+        "image": "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=600&auto=format&fit=crop"
+      },
+      {
+        "name": "Middle School (6th – 8th)",
+        "description": "Subject-based learning in Science, Mathematics, Social Studies, and Languages with practical experiments and digital tools to deepen understanding.",
+        "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop"
+      },
+      {
+        "name": "High School (9th – 10th)",
+        "description": "Rigorous SSC board exam preparation with strong focus on Mathematics, Science, English, and career foundation building with consistent 100% results.",
         "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop"
       },
       {
-        "name": "Global Humanities",
-        "description": "A profound exploration of history, philosophy, and literature, fostering a deep understanding of the human condition.",
-        "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop"
-      },
-      {
-        "name": "Economics & Diplomacy",
-        "description": "Preparing future policymakers and financial leaders through rigorous analytical frameworks and debate.",
-        "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600&auto=format&fit=crop"
-      },
-      {
-        "name": "Fine & Performing Arts",
-        "description": "Cultivating artistic excellence through our conservatory-style programs in music, theater, and visual arts.",
+        "name": "Co-Curricular Activities",
+        "description": "Sports, cultural programs, annual day, science exhibitions, quiz and debate competitions — developing confidence, teamwork, and leadership in every student.",
         "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600&auto=format&fit=crop"
       }
     ],
     "curriculumHighlights": [
-      "Full International Baccalaureate (IB) Diploma",
-      "Advanced Placement (AP) Capstone",
-      "Independent Research Fellowships",
-      "Multilingual Proficiency Requirement"
+      "SSC Board — Consistent 100% Pass Rate",
+      "Smart Classrooms & Digital Learning",
+      "Science, Computer & Library Facilities",
+      "Spoken English & Communication Skills"
     ]
   },
   "gallery": {
-    "headerImage": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
-    "categories": ["Campus", "Academics", "Athletics", "Arts"],
+    "headerImage": "/Aerial%20%20Top%20View%20(Drone%20Style)/drone.png",
+    "categories": ["Campus", "Academics", "Sports", "Events"],
     "images": [
-      { "id": "g1", "url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop", "category": "Campus", "alt": "Historic Main Building" },
-      { "id": "g2", "url": "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop", "category": "Academics", "alt": "Library Atrium" },
-      { "id": "g3", "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop", "category": "Academics", "alt": "Advanced Study Hall" },
-      { "id": "g4", "url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop", "category": "Academics", "alt": "Science Research Facility" },
-      { "id": "g5", "url": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop", "category": "Athletics", "alt": "Olympic-sized Pool" },
-      { "id": "g6", "url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop", "category": "Arts", "alt": "Conservatory Performance" },
-      { "id": "g7", "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop", "category": "Campus", "alt": "Innovation Center" },
-      { "id": "g8", "url": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=800&auto=format&fit=crop", "category": "Athletics", "alt": "Tennis Courts" }
+      { "id": "g1", "url": "/homepage/homepage%20hero%20image.png", "category": "Campus", "alt": "School Front View" },
+      { "id": "g2", "url": "/Classroom%20Interior/Gemini_Generated_Image_3mnlzw3mnlzw3mnl.png", "category": "Academics", "alt": "Classroom Interior" },
+      { "id": "g3", "url": "/Assembly%20Ground/Gemini_Generated_Image_rsxe32rsxe32rsxe.png", "category": "Events", "alt": "Assembly Ground" },
+      { "id": "g4", "url": "/Campus%20Garden%20%20Environment/Gemini_Generated_Image_h49s89h49s89h49s.png", "category": "Campus", "alt": "Campus Garden" },
+      { "id": "g5", "url": "/school-bus/Gemini_Generated_Image_a87heda87heda87h.png", "category": "Campus", "alt": "School Bus" },
+      { "id": "g6", "url": "/school-bus/Gemini_Generated_Image_nmq6gmnmq6gmnmq6.png", "category": "Campus", "alt": "School Transport" },
+      { "id": "g7", "url": "/Aerial%20%20Top%20View%20(Drone%20Style)/drone.png", "category": "Campus", "alt": "Aerial Campus View" },
+      { "id": "g8", "url": "/About%20Us%20section/about.png", "category": "Academics", "alt": "Students Learning" },
+      { "id": "g9", "url": "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=800&auto=format&fit=crop", "category": "Academics", "alt": "Students in Class" },
+      { "id": "g10", "url": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop", "category": "Sports", "alt": "Sports Day" },
+      { "id": "g11", "url": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=800&auto=format&fit=crop", "category": "Sports", "alt": "Cricket Ground" },
+      { "id": "g12", "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop", "category": "Events", "alt": "Annual Day Celebration" }
     ]
   }
 }

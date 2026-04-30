@@ -1,82 +1,110 @@
+"use client";
+
 import data from "@/data/data.json";
-import { FadeIn, StaggerContainer, StaggerItem, HoverCard } from "@/components/Animations";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/Animations";
+import { Target, Eye, Clock } from "lucide-react";
 
 export default function AboutPage() {
   const { about } = data;
 
   return (
     <div className="w-full">
-      {/* Header */}
-      <section 
-        className="relative py-24 md:py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${about.headerImage})` }}
-      >
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-        <FadeIn className="container relative z-10 mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-4 md:mb-6 tracking-tight">About Us</h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed px-2">
-            {about.intro}
-          </p>
-        </FadeIn>
+      {/* Hero Header */}
+      <section className="relative min-h-[45vh] md:min-h-[60vh] flex items-end pb-12 md:pb-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${about.headerImage})` }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/20" />
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn direction="up">
+            <span className="text-accent uppercase tracking-[0.25em] text-xs font-bold">Our Story</span>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-white mt-2 leading-tight tracking-tight">About Us</h1>
+            <p className="text-base md:text-xl text-gray-300 max-w-2xl mt-3 font-light leading-relaxed">{about.intro}</p>
+          </FadeIn>
+        </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid md:grid-cols-2 gap-8 lg:gap-24">
+          <StaggerContainer className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <StaggerItem direction="left">
-              <HoverCard>
-                <div className="editorial-card p-8 md:p-12 h-full flex flex-col justify-center">
-                  <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold mb-3 md:mb-4">Our Mission</h2>
-                  <p className="text-primary font-serif leading-relaxed text-xl md:text-3xl">{about.mission}</p>
+              <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-10 md:p-14 h-full min-h-[280px] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div className="bg-accent/20 w-14 h-14 rounded-xl flex items-center justify-center mb-8">
+                  <Target size={28} className="text-accent" />
                 </div>
-              </HoverCard>
+                <div>
+                  <span className="text-accent uppercase tracking-[0.25em] text-xs font-bold">Our Mission</span>
+                  <p className="text-white font-serif leading-relaxed text-xl md:text-2xl mt-4">{about.mission}</p>
+                </div>
+              </div>
             </StaggerItem>
             <StaggerItem direction="right">
-              <HoverCard>
-                <div className="p-8 md:p-12 h-full flex flex-col justify-center bg-primary text-primary-foreground border border-primary shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] rounded-sm">
-                  <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold mb-3 md:mb-4">Our Vision</h2>
-                  <p className="font-serif leading-relaxed text-xl md:text-3xl">{about.vision}</p>
+              <div className="group relative overflow-hidden rounded-2xl bg-accent p-10 md:p-14 h-full min-h-[280px] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div className="bg-white/20 w-14 h-14 rounded-xl flex items-center justify-center mb-8">
+                  <Eye size={28} className="text-white" />
                 </div>
-              </HoverCard>
+                <div>
+                  <span className="text-white/70 uppercase tracking-[0.25em] text-xs font-bold">Our Vision</span>
+                  <p className="text-white font-serif leading-relaxed text-xl md:text-2xl mt-4">{about.vision}</p>
+                </div>
+              </div>
             </StaggerItem>
           </StaggerContainer>
         </div>
       </section>
 
       {/* History */}
-      <section className="py-16 lg:py-32 bg-muted/30 border-y border-border overflow-hidden">
-        <FadeIn className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center" direction="up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary mb-6 md:mb-8 tracking-tight">Our Heritage</h2>
-          <div className="h-px w-16 md:w-24 bg-accent mx-auto mb-6 md:mb-8"></div>
-          <p className="text-muted-foreground leading-relaxed text-lg md:text-2xl font-light">{about.history}</p>
+      <section className="py-20 lg:py-28 bg-muted/40 relative overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
+        <FadeIn className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl" direction="up">
+          <div className="flex items-start gap-6 md:gap-10">
+            <div className="bg-accent/10 p-4 rounded-2xl shrink-0 hidden md:flex">
+              <Clock size={32} className="text-accent" />
+            </div>
+            <div>
+              <span className="text-accent uppercase tracking-[0.25em] text-xs font-bold">Our Heritage</span>
+              <h2 className="text-4xl md:text-5xl font-serif text-primary mt-3 mb-6 leading-tight">A Legacy of Learning</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg md:text-xl font-light">{about.history}</p>
+            </div>
+          </div>
         </FadeIn>
       </section>
 
-
+      {/* Values strip */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <StaggerContainer className="grid grid-cols-3 gap-4 md:gap-8 text-center">
+            {["Knowledge", "Discipline", "Values"].map((v, i) => (
+              <StaggerItem key={v} direction="up">
+                <div className="py-8">
+                  <div className="text-4xl md:text-6xl font-serif text-accent font-light mb-2">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="text-white uppercase tracking-[0.2em] text-xs md:text-sm font-semibold">{v}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
 
       {/* Leadership */}
-      <section className="py-16 lg:py-32 bg-background">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="text-center mb-12 md:mb-20" direction="up">
-            <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold mb-3 md:mb-4">Administration</h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary tracking-tight">Eminent Leadership</h3>
+          <FadeIn className="mb-14 md:mb-20" direction="up">
+            <span className="text-accent uppercase tracking-[0.25em] text-xs font-bold">Administration</span>
+            <h3 className="text-4xl sm:text-5xl font-serif text-primary mt-3 leading-tight">Our Leadership</h3>
           </FadeIn>
-          <StaggerContainer className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          <StaggerContainer className="grid md:grid-cols-2 gap-8 max-w-5xl">
             {about.leadership.map((leader, i) => (
               <StaggerItem key={i} direction="up">
-                <HoverCard>
-                  <div className="flex flex-col gap-4 md:gap-6 p-6 md:p-8 h-full">
-                    <div className="w-full h-64 md:h-80 overflow-hidden rounded-sm">
-                      <img src={leader.image} alt={leader.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-serif text-primary mb-1">{leader.name}</h3>
-                      <p className="text-accent uppercase tracking-wider md:tracking-widest text-[10px] md:text-xs font-semibold mb-3 md:mb-4">{leader.role}</p>
-                      <p className="text-muted-foreground font-light leading-relaxed text-sm md:text-base">{leader.bio}</p>
-                    </div>
+                <div className="group flex flex-col sm:flex-row gap-6 p-6 md:p-8 rounded-2xl border border-border hover:border-accent hover:shadow-xl transition-all duration-300 bg-card">
+                  <div className="w-full sm:w-36 h-48 sm:h-36 overflow-hidden rounded-xl shrink-0">
+                    <img src={leader.image} alt={leader.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                </HoverCard>
+                  <div className="flex flex-col justify-center">
+                    <h3 className="text-xl font-serif text-primary">{leader.name}</h3>
+                    <p className="text-accent uppercase tracking-widest text-xs font-bold mt-1 mb-3">{leader.role}</p>
+                    <p className="text-muted-foreground font-light leading-relaxed text-sm">{leader.bio}</p>
+                  </div>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>

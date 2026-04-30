@@ -1,62 +1,91 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, MapPin, Phone, Mail, Globe, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import data from "@/data/data.json";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card text-card-foreground border-t border-border mt-20">
+    <footer className="bg-slate-900 text-white">
+      {/* Top CTA band */}
+      <div className="bg-accent py-10 md:py-12 px-4">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+          <div>
+            <h3 className="text-xl md:text-3xl font-serif text-white font-light">Ready to join Gautam High School?</h3>
+            <p className="text-white/70 mt-1 text-sm">Admissions open for 2025–26. Limited seats available.</p>
+          </div>
+          <Link href="/contact"
+            className="shrink-0 inline-flex items-center gap-2 bg-white text-accent font-semibold px-7 py-3.5 rounded-full text-sm uppercase tracking-widest hover:bg-white/90 transition-colors">
+            Apply Now <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div>
+
+      {/* Main footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand & About */}
-          <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 group inline-flex">
-              <div className="bg-primary text-primary-foreground p-2 rounded-xl">
-                <BookOpen size={24} />
-              </div>
-              <span className="font-serif font-semibold text-2xl tracking-widest uppercase">
-                {data.school.logo}
-              </span>
+          {/* Brand */}
+          <div className="space-y-6 lg:col-span-1">
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="/logo/logo.png" alt="Gautam High School" width={52} height={52} className="rounded-xl object-contain" />
+              <span className="font-serif font-semibold text-xl tracking-widest uppercase text-white">Gautam</span>
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              {data.school.tagline} {data.school.about_snippet}
+            <p className="text-white/50 text-sm leading-relaxed">
+              {data.school.tagline} Proddatur, Andhra Pradesh.
             </p>
-            <div className="flex gap-4">
-              <a href={data.contact.socialLinks.facebook} className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook"><Globe size={20} /></a>
-              <a href={data.contact.socialLinks.twitter} className="text-muted-foreground hover:text-primary transition-colors" aria-label="Youtube"><Globe size={20} /></a>
-              <a href={data.contact.socialLinks.instagram} className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram"><Globe size={20} /></a>
-              <a href={data.contact.socialLinks.linkedin} className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn"><Globe size={20} /></a>
+            <div className="flex gap-3">
+              {[
+                { label: "Facebook", href: data.contact.socialLinks.facebook },
+                { label: "Instagram", href: data.contact.socialLinks.instagram },
+                { label: "Youtube", href: data.contact.socialLinks.twitter },
+                { label: "Twitter", href: data.contact.socialLinks.linkedin },
+              ].map(({ href, label }) => (
+                <a key={label} href={href} aria-label={label}
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-colors duration-300 text-xs font-bold">
+                  {label[0]}
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Quick Links</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-white/50 mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"><ArrowRight size={14} /> About Us</Link></li>
-              <li><Link href="/academics" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"><ArrowRight size={14} /> Academics</Link></li>
-              <li><Link href="/gallery" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"><ArrowRight size={14} /> Gallery</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"><ArrowRight size={14} /> Contact</Link></li>
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Academics", href: "/academics" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href}
+                    className="text-white/60 hover:text-accent transition-colors inline-flex items-center gap-2 text-sm group">
+                    <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Contact Us</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-white/50 mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin size={20} className="text-primary shrink-0 mt-0.5" />
-                <span className="text-sm">{data.contact.address}</span>
+              <li className="flex items-start gap-3 text-white/60">
+                <MapPin size={16} className="text-accent shrink-0 mt-0.5" />
+                <span className="text-sm leading-relaxed">{data.contact.address}</span>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Phone size={20} className="text-primary shrink-0" />
+              <li className="flex items-center gap-3 text-white/60">
+                <Phone size={16} className="text-accent shrink-0" />
                 <span className="text-sm">{data.contact.phone}</span>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Mail size={20} className="text-primary shrink-0" />
+              <li className="flex items-center gap-3 text-white/60">
+                <Mail size={16} className="text-accent shrink-0" />
                 <span className="text-sm">{data.contact.email}</span>
               </li>
             </ul>
@@ -64,34 +93,28 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Newsletter</h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              Subscribe to get the latest news and updates from our academy.
-            </p>
-            <form className="flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="bg-muted border border-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+            <h3 className="font-semibold text-sm uppercase tracking-widest text-white/50 mb-6">Stay Updated</h3>
+            <p className="text-white/50 text-sm mb-4 leading-relaxed">Get school news, events, and updates in your inbox.</p>
+            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-accent transition-all"
                 required
               />
-              <button 
-                type="submit" 
-                className="bg-primary text-primary-foreground border border-primary rounded-lg px-4 py-3 text-xs uppercase tracking-widest font-medium hover:bg-transparent hover:text-primary transition-colors"
-              >
+              <button type="submit"
+                className="bg-accent text-white rounded-xl px-4 py-3 text-xs uppercase tracking-widest font-semibold hover:bg-accent/80 transition-colors">
                 Subscribe
               </button>
             </form>
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm text-center md:text-left">
-            &copy; {currentYear} {data.school.name}. All rights reserved.
-          </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white/30 text-sm">&copy; {currentYear} {data.school.name}. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-white/30">
+            <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SplashWrapper from "@/components/SplashWrapper";
 import data from "@/data/data.json";
 
 const geistSans = Geist({
@@ -28,12 +29,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <SplashWrapper>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </SplashWrapper>
       </body>
     </html>
   );
