@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+:root {
+  /* Ultra Premium Light Mode Palette: Warm cream, deep slate, gold accent */
+  --background: #FAFAFA;
+  --foreground: #111827;
+  
+  --primary: #0F172A; /* Deep slate */
+  --primary-foreground: #FAFAFA;
+  
+  --accent: #B4975A; /* Elegant muted gold/champagne */
+  --accent-foreground: #FFFFFF;
+
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  
+  --border: #E5E7EB;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Ultra Premium Dark Mode Palette: Charcoal, soft white, gold accent */
+    --background: #0B0F19; /* Very dark blue-grey */
+    --foreground: #F9FAFB;
+    
+    --primary: #F9FAFB;
+    --primary-foreground: #0B0F19;
+    
+    --accent: #C5A869; /* Brighter gold for dark mode */
+    --accent-foreground: #000000;
+
+    --muted: #1F2937;
+    --muted-foreground: #9CA3AF;
+    
+    --card: #111827;
+    --card-foreground: #F9FAFB;
+    
+    --border: #374151;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* High-End Glassmorphism */
+.glass {
+  background: rgba(250, 250, 250, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(11, 15, 25, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Elegant Cards */
+.editorial-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .editorial-card {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+  }
+  .editorial-card:hover {
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for gallery but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sleek inputs */
+input, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent) !important;
+  outline: none;
 }
